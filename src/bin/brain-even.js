@@ -6,7 +6,7 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
 const num = () => getRandomInt(1, 100);
 const isEven = n => ((n % 2 === 0) ? 'yes' : 'no');
 
-const   getNum = () => getRandomInt(1, 100);
+const getNum = () => getRandomInt(1, 100);
 
 const func = () => {
   greeting();
