@@ -23,7 +23,7 @@ export const questionAndAnswer = (q) => {
   return ans;
 };
 
-export const func = () => {
+export const brainEven = () => {
   greeting();
   console.log('Answer "yes" if number even otherwise answer "no".\n');
   const name = whatIsYourName();
@@ -40,6 +40,41 @@ export const func = () => {
     }
   }
   console.log(`Congratulations, ${name}!`);
+};
+
+const randomOperator = () => {
+  const operators = '+-*';
+  return operators[getRandomInt(0, 3)];
+};
+
+const stringToOperation = (n1, n2, str) => {
+  if (str === '+') return n1 + n2;
+  else if (str === '-') return n1 - n2;
+  return n1 * n2;
+};
+
+export const calcGame = () => {
+  greeting();
+  console.log('What is the result of the expression?\n');
+  const name = whatIsYourName();
+  let i = 0;
+  while (i < 3) {
+    const n1 = getRandomInt(1, 10);
+    const n2 = getRandomInt(1, 10);
+    const operator = randomOperator();
+    const q = `${n1} ${operator} ${n2}`;
+    const ans = questionAndAnswer(q);
+    const rightAnswer = String(stringToOperation(n1, n2, operator));
+    if (rightAnswer === ans) {
+      console.log('Correct!');
+      i += 1;
+    } else {
+      console.log(`'${ans}' is wrong answer. Right answer is ${rightAnswer} \n Let's try again, ${name}!`);
+      return '';
+    }
+  }
+  console.log(`Congratulations, ${name}!`);
+  return '';
 };
 
 export default getUserName;
