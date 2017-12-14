@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { func } from '..';
+import { brainEven } from '..';
 
-func();
+brainEven();
 
