@@ -1,6 +1,6 @@
 {
   "name": "brain_games_yelrik",
-  "version": "0.5.3",
+  "version": "0.5.42",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,8 @@
     "brain-games": "dist/bin/games/brain-games.js",
     "brain-even": "dist/bin/games/brain-even.js",
     "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js"
+    "brain-gcd": "dist/bin/games/brain-gcd.js",
+    "brain-balance": "dist/bin/games/brain-balance.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.7"
